@@ -41,6 +41,12 @@ app.get('/health_check', (req: Request, res: Response) => {
   });
 });
 
+app.get('/test/cicd', (req: Request, res: Response) => {
+  res.status(StatusCodes.OK).json({
+    message: 'Hello from CICD pipeline. cicd pipeline is working fine.',
+  });
+})
+
 app.get('/favicon.ico', (req: Request, res: Response) => {
   res.status(204).end(); // No Content
 });
